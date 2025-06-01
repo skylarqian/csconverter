@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e6f4f7;
+  --foreground: #000000;
+  --white: #ffffff;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -15,12 +16,168 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff;
   }
+} */
+
+.mainholder {
+  display: inline-flex;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+h1 {
+  color: #000;
+  text-align: center;
+  font-family: "Kaisei HarunoUmi";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.inputcontainer {
+  display: flex;
+  padding: 8px 0px;
+  align-items: center;
+  gap: 17px;
+}
+.outputbox {
+  display: inline-flex;
+  padding: 29px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.invalidbox {
+  display: inline-block;
+  padding: 15px 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: #C6EFF6;
+  min-width: 400px;
+}
+.bhdbox {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+  background: #C6EFF6;
+  align-self: stretch;
+  min-width: 400px;
+}
+.bhdlabel {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+}
+.bhdcontentbox {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
+.riscbox {
+  display: inline-flex;
+  padding: 13px;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  border-radius: 20px;
+  background: #C6EFF6;
+  align-self: stretch
+}
+
+.instrdecodefullbox {
+  display: flex;
+  padding: 6px 15px;
+  align-items: center;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.60);
+}
+
+.instrdecodebox {
+  display: flex;
+  padding: 12px 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.instra {
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: Judson;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.instrb {
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: Judson;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.instrc {
+  align-self: stretch;
+  color: #000;
+  text-align: center;
+  font-family: Judson;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.instrdecodetopbox {
+  display: inline-flex;
+  padding: 10px 14px;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  border-radius: 10px;
+  background: #EDFCFF;
+}
+
+p {
+  font-size: 20;
+  text-align: center;
+}
 body {
+  display: flex;
+  flex-direction: column;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Judson;
+  opacity: 0.7;
+  justify-content: center;
+}
+input {
+  background: var(--white);
+  font-size: 20;
+  border-radius: 10px;
+  padding: 5px;
+}
+select {
+  background: var(--white);
+  font-size: 20;
+  border-radius: 10px;
+  padding: 7px;
 }

@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "postexport": "shx touch out/.nojekyll",
-    "deploy": "next build && npm run postexport && gh-pages -d out",
+    "postexport": "touch ./out/.nojekyll",
+    "static": "next build && npm run postexport",
+    "deploy": "gh-pages -d out --nojekyll",
     "start": "next start",
     "lint": "next lint"
   },

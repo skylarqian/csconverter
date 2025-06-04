@@ -181,3 +181,17 @@ select {
   border-radius: 10px;
   padding: 7px;
 }
+
+footer { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+}
+
+button {
+  font-family: Judson;
+  background: var(--white);
+  border-radius: 10px;
+  padding: 7px;
+}

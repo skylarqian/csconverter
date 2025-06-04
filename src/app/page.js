@@ -441,6 +441,36 @@ export default function Home() {
         break;
     }
   }
+  const [copiedbinary, setCopiedbinary] = useState(false);
+  const handleCopybinary = async () => {
+    try {
+      await navigator.clipboard.writeText(binary);
+      setCopiedbinary(true);
+      setTimeout(() => setCopiedbinary(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
+  };
+  const [copiedhex, setCopiedhex] = useState(false);
+  const handleCopyhex = async () => {
+    try {
+      await navigator.clipboard.writeText(hex);
+      setCopiedhex(true);
+      setTimeout(() => setCopiedhex(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
+  };
+  const [copieddecimal, setCopieddecimal] = useState(false);
+  const handleCopydecimal = async () => {
+    try {
+      await navigator.clipboard.writeText(decimal);
+      setCopieddecimal(true);
+      setTimeout(() => setCopieddecimal(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
+  };
 
 
   return (
@@ -468,6 +498,11 @@ export default function Home() {
           <p>{binary}</p>
           <p>{hex}</p>
           <p>{decimal}</p>
+        </div>
+        <div className="bhdcontentbox">
+          <button onClick={handleCopybinary}>{copiedbinary ? 'Copied!' : 'Copy'}</button>
+          <button onClick={handleCopyhex}>{copiedhex ? 'Copied!' : 'Copy'}</button>
+          <button onClick={handleCopydecimal}>{copieddecimal ? 'Copied!' : 'Copy'}</button>
         </div>
       </div>
       {validRisc ? (

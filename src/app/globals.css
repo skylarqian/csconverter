@@ -156,6 +156,17 @@ h1 {
   background: #EDFCFF;
 }
 
+.instrtext {
+  color: #000;
+  text-align: center;
+  font-family: Judson;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: stretch;
+}
+
 p {
   font-size: 20;
   text-align: center;
